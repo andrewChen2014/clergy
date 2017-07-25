@@ -3,7 +3,8 @@
 # nmake -f Makefile.nmake debug=1
 # nmake -f Makefile.nmake clean debug=1
 # nmake -f Makefile.nmake clean_obj debug=1
-#
+#tips
+# if you dont sure about the flags , create a project ,watch the compile command and link command
 
 # WATCH OUT!  This makefile is a work in progress.             -*- makefile -*-
 #
