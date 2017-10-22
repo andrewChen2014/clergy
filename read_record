@@ -9,6 +9,9 @@
 
 // go引用外部包的问题
     https://stackoverflow.com/questions/43018667/vs-code-cant-install-the-go-tools
+    对于代码里 import "github.com/Re-volution/sizestruct"
+    先要 go get -u -v github.com/Re-volution/sizestruct 下载下来
+    才能运行
     
     
     
