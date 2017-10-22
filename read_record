@@ -6,6 +6,9 @@
 
 // Recycling memory buffers in Go
     https://blog.cloudflare.com/recycling-memory-buffers-in-go/
+
+// go引用外部包的问题
+    https://stackoverflow.com/questions/43018667/vs-code-cant-install-the-go-tools
     
     
     
