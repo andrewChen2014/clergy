@@ -3,6 +3,11 @@
    
 // 游戏服务器架构的演进简史
     http://www.infoq.com/cn/articles/a-brief-history-of-the-game-server-architecture
+
+// Recycling memory buffers in Go
+    https://blog.cloudflare.com/recycling-memory-buffers-in-go/
+    
+    
     
     
     
