@@ -7,6 +7,9 @@
 // Recycling memory buffers in Go
     https://blog.cloudflare.com/recycling-memory-buffers-in-go/
 
+// 守望先锋》首席工程师：我们是如何做架构设计与网络同步的？
+    http://youxiputao.com/articles/12235
+
 // go引用外部包的问题
     https://stackoverflow.com/questions/43018667/vs-code-cant-install-the-go-tools
     对于代码里 import "github.com/Re-volution/sizestruct"
