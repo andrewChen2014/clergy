@@ -23,12 +23,15 @@
         // 1.1 版的 lua 模块放进了专门的名字空间下
 
 
-  // 开发新的
+  // 开发
     // (ok) 我所偏爱的 C 语言面向对象编程范式
       https://blog.codingnow.com/2010/03/object_oriented_programming_in_c.html
       // 其实就是面向对象的c的惯用法
     // (ok) IOCP , kqueue , epoll ... 有多重要？
       https://blog.codingnow.com/2006/04/iocp_kqueue_epoll.html
       // 06年的老文章了
+    //  关于 getter 和 setter
+      https://blog.codingnow.com/2009/08/getter_setter.html
+      
       
       
