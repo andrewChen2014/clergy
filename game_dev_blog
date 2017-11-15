@@ -1,7 +1,8 @@
 // cloud
   // go
-    // Go 语言初步
+    // (ok) Go 语言初步
       https://blog.codingnow.com/2010/11/go_prime.html
+      // 学习一门新语言，就是在学习它的各种惯用法和库。而不是去模拟熟悉的语言。
     // Go 语言初学实践(1)
       https://blog.codingnow.com/2011/03/go_1.html
     // Go 语言初学实践(2)
@@ -25,5 +26,9 @@
   // 开发新的
     // (ok) 我所偏爱的 C 语言面向对象编程范式
       https://blog.codingnow.com/2010/03/object_oriented_programming_in_c.html
+      // 其实就是面向对象的c的惯用法
+    // (ok) IOCP , kqueue , epoll ... 有多重要？
+      https://blog.codingnow.com/2006/04/iocp_kqueue_epoll.html
+      // 06年的老文章了
       
       
