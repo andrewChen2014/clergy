@@ -30,8 +30,8 @@
     // (ok) IOCP , kqueue , epoll ... 有多重要？
       https://blog.codingnow.com/2006/04/iocp_kqueue_epoll.html
       // 06年的老文章了
-    //  关于 getter 和 setter
+    // (ok) 关于 getter 和 setter
       https://blog.codingnow.com/2009/08/getter_setter.html
-      
+      // 里面hash管理全局string，倒是用到了,不错
       
       
