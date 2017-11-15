@@ -14,4 +14,16 @@
       https://blog.codingnow.com/2011/05/gc_performance.html
     // 读了一点 go 的源码
       https://blog.codingnow.com/2013/08/reading_golang_source.html
-  // 
+  // skynet
+    // skynet 1.1.0 发布
+      https://blog.codingnow.com/2017/10/skynet_1_1.html
+      // 看下
+        // 网络写操作会尝试先在 IO 线程之外完成。在需要做大量数据发送的场合（例如做流媒体广播），性能会有明显的提升。
+        // 1.1 版的 lua 模块放进了专门的名字空间下
+
+
+  // 开发新的
+    // (ok) 我所偏爱的 C 语言面向对象编程范式
+      https://blog.codingnow.com/2010/03/object_oriented_programming_in_c.html
+      
+      
