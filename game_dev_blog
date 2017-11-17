@@ -36,7 +36,7 @@
     // (ok) 关于 getter 和 setter
       https://blog.codingnow.com/2009/08/getter_setter.html
       // 里面hash管理全局string，倒是用到了,不错
-    // 梦幻西游服务器 IO 问题
+    // (ok) 梦幻西游服务器 IO 问题
       https://blog.codingnow.com/2011/03/optimize_io.html
       
       
