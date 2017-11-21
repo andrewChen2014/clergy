@@ -1,0 +1,23 @@
+		// (ok) TDEngine游戏平台框架逻辑
+			http://www.jianshu.com/p/418b0f741333
+		// (ok) TDEngine 压力测试思路
+			http://www.jianshu.com/p/401a80e5cf22?utm_campaign=maleskine&utm_content=note&utm_medium=pc_all_hots&utm_source=recommendation
+		// TDEngine数据包的详细说明
+			http://www.jianshu.com/p/005964f3e167?utm_campaign=maleskine&utm_content=note&utm_medium=pc_all_hots&utm_source=recommendation
+      
+      
+      
+      
+    // (ok) 类似于QQ游戏百万人同时在线的服务器架构实现
+			http://blog.csdn.net/sodme/article/details/213995
+			// 这个比较原始了，不过写的也比较早，04年的文章
+    // 负载均衡－－大型在线系统实现的关键(上篇)（再谈QQ游戏百万人在线的技术实现）
+			http://blog.csdn.net/sodme/article/details/393165
+      
+    // (ok) 大服游戏架构
+      https://zhuanlan.zhihu.com/p/25958589
+      // 主要是做好stateless和单点，其实结构上都是大同小异
+      
+    // 游戏服务器的常用架构
+      https://blog.xiaomo.info/2017/GameServerType/
+      
