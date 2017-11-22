@@ -28,6 +28,12 @@
     	https://www.qcloud.com/community/article/253
     // (ok) 经典游戏服务器端架构概述 (2)
     	https://www.qcloud.com/community/article/164816001481011966
+	全服分线模型
+	分区分服
+	开房间型游戏模型
+	全服全线模型
+		// 基于中心点的动态组织
+			一般来说我们会使用一组目录服务器来充当“中心点”，代表整个集群。开源产品中最好的产品就是ZooKeeper了。
 	
     // (ok) 格斗类帧同步游戏的优化
     	https://www.qcloud.com/community/article/520940
