@@ -1,18 +1,18 @@
-		// (ok) TDEngine游戏平台框架逻辑
-			http://www.jianshu.com/p/418b0f741333
-		// (ok) TDEngine 压力测试思路
-			http://www.jianshu.com/p/401a80e5cf22?utm_campaign=maleskine&utm_content=note&utm_medium=pc_all_hots&utm_source=recommendation
-		// TDEngine数据包的详细说明
-			http://www.jianshu.com/p/005964f3e167?utm_campaign=maleskine&utm_content=note&utm_medium=pc_all_hots&utm_source=recommendation
+    // (ok) TDEngine游戏平台框架逻辑
+	http://www.jianshu.com/p/418b0f741333
+    // (ok) TDEngine 压力测试思路
+	http://www.jianshu.com/p/401a80e5cf22?utm_campaign=maleskine&utm_content=note&utm_medium=pc_all_hots&utm_source=recommendation
+    // TDEngine数据包的详细说明
+        http://www.jianshu.com/p/005964f3e167?utm_campaign=maleskine&utm_content=note&utm_medium=pc_all_hots&utm_source=recommendation
       
       
       
       
     // (ok) 类似于QQ游戏百万人同时在线的服务器架构实现
-			http://blog.csdn.net/sodme/article/details/213995
-			// 这个比较原始了，不过写的也比较早，04年的文章
+	http://blog.csdn.net/sodme/article/details/213995
+	// 这个比较原始了，不过写的也比较早，04年的文章
     // 负载均衡－－大型在线系统实现的关键(上篇)（再谈QQ游戏百万人在线的技术实现）
-			http://blog.csdn.net/sodme/article/details/393165
+	http://blog.csdn.net/sodme/article/details/393165
       
     // (ok) 大服游戏架构
       https://zhuanlan.zhihu.com/p/25958589
@@ -44,4 +44,10 @@
 			所谓逻辑模块，就用来运行所有的攻击判定（角色位置、攻击与受击区域）的变化，使用服务器发来的网络包进行驱动，也就是通过同步服务器得到包后再运行。
 		二、纠正渲染误差
 			尽量弥补2者间的误差
+			
+    // (ok) 棋牌游戏服务器架构设计
+    	https://www.cnblogs.com/wgslucky/p/6426544.html
+	// 介绍的思路以前都了解过，主要是怎么适合的用进自己的代码中
+	
+    // 
 			
