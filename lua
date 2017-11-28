@@ -53,11 +53,34 @@
 			// 九、既然LuaJIT坑那么多那么复杂，为什么不用原生Lua？
 			
 			
-    // luajit官方性能优化指南和注解
+    // (ok) luajit官方性能优化指南和注解
         http://www.cnblogs.com/zwywilliam/p/5992737.html
-    // Numerical Computing Performance Guide
+			// 1.Reduce number of unbiased/unpredictable branches. (减少不可预测的分支代码)
+				
+			// 2.Use FFI data structures. (如果可以，将你的数据结构用ffi实现，而不是用lua table实现)
+				
+			// 3.Call C functions only via the FFI. (尽可能用ffi来调用c函数。)
+				
+			// 4.Use plain 'for i=start,stop,step do ... end' loops. (实现循环时，最好使用简单的for i = start, stop, step do这样的写法，或者使用ipairs，而尽量避免使用for k,v in pairs(x) do)
+				
+			// 5.Find the right balance for unrolling. (循环展开，有利有弊，需要自己去平衡)
+				
+			// 6.Define and call only 'local' (!) functions within a module.
+				
+			// 7.Cache often-used functions from other modules in upvalues. (调用任何函数的时候，保证这个函数是local function，性能会更好)
+				
+			// 8.Avoid inventing your own dispatch mechanisms. (避免使用你自己实现的分发调用机制，而尽量使用內建的例如metatable这样的机制)
+				
+			// 9.Do not try to second-guess the JIT compiler. (无需过多去帮jit编译器做手工优化)
+				
+			// 10.Be careful with aliasing, esp. when using multiple arrays. (变量的别名可能会阻止jit优化掉子表达式，尤其是在使用多个数组的时候。)
+				
+			// 11.Reduce the number of live temporary variables. (减少存活着的临时变量的数量)
+				
+			// 12.Do not intersperse expensive or uncompiled operations. (减少使用高消耗或者不支持jit的操作)
+    // (ok) Numerical Computing Performance Guide
         http://wiki.luajit.org/Numerical-Computing-Performance-Guide
-
+	// 描述的条条框框，大概了解下，实际在项目里用了才知道
 
 
 
