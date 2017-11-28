@@ -82,7 +82,12 @@
         http://wiki.luajit.org/Numerical-Computing-Performance-Guide
 	// 描述的条条框框，大概了解下，实际在项目里用了才知道
 
-
+    // (ok) luajit FFI简单使用
+    	http://blog.csdn.net/erlang_hell/article/details/52836467
+	http://luajit.org/ext_ffi.html
+	// 每个例子基本都玩了一遍
+	
+	
 
 
 
