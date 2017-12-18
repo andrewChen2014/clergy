@@ -1,3 +1,6 @@
+// Lua Version Compatibility
+	http://lua-users.org/wiki/LuaVersionCompatibility
+
 // luajit
     // luajit编译
 	// windows
