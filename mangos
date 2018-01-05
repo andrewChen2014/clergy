@@ -33,34 +33,86 @@
 			// (ok) (搬运工)Mangos源码分析（7）：服务器公共组件实现之游戏主循环
 				http://www.cppblog.com/ming81/archive/2011/01/19/138874.html
 
-			//  (搬运工)Mangos源码分析（8）：服务器公共组件实现之消息队列
+			// (ok) (搬运工)Mangos源码分析（8）：服务器公共组件实现之消息队列
 				http://www.cppblog.com/ming81/archive/2011/01/19/138877.html
+				// 如何减少锁竞争次数的优化方案
+					// 方案1
+						Ghost Cheng提出了一种。提供一个队列容器，里面有多个队列，每个队列都可固定存放一定数量的消息。
+						网络IO线程要给逻辑线程投递消息时，会从队列容器中取一个空队列来使用，直到将该队列填满后再放回容器中换另一个空队列。
+						而逻辑线程取消息时是从队列容器中取一个有消息的队列来读取，处理完后清空队列再放回到容器中。
+					// 方案2
+						arthur在他的一封邮件中描述了这个方案的实现及部分代码。两个队列，一个给逻辑线程读，一个给IO线程用来写，
+						当逻辑线程读完队列后会将自己的队列与IO线程的队列相调换。所以，这种方案下加锁的次数会比较多一些，
+						IO线程每次写队列时都要加锁，逻辑线程在调换队列时也需要加锁，但逻辑线程在读队列时是不需要加锁的。
 
-			//  (搬运工)Mangos源码分析（9）：服务器公共组件实现之环形缓冲区
+			// (ok) (搬运工)Mangos源码分析（9）：服务器公共组件实现之环形缓冲区
 				http://www.cppblog.com/ming81/archive/2011/01/19/138891.html
+				// 环形缓冲区 (ring buffer)
 
-			//  (搬运工)Mangos源码分析（10）：服务器公共组件实现之发包的方式
+			// (ok) (搬运工)Mangos源码分析（10）：服务器公共组件实现之发包的方式
 				http://www.cppblog.com/ming81/archive/2011/01/19/138892.html
 
-			//  (搬运工)Mangos源码分析（11）：服务器公共组件实现之状态机
+			// (ok) (搬运工)Mangos源码分析（11）：服务器公共组件实现之状态机
 				http://www.cppblog.com/ming81/archive/2011/01/19/138893.html
+				// 所有的模式都是已有问题的另一种解决方案，也就是说这并不是唯一的解决方案。
 
-			//  (搬运工)Mangos源码分析（12）：服务器公共组件实现之事件与信号
+			// (ok) (搬运工)Mangos源码分析（12）：服务器公共组件实现之事件与信号
 				http://www.cppblog.com/ming81/archive/2011/01/19/138907.html
 
-			//  (搬运工)Mangos源码分析（13）：再谈登录服的实现
+			// (ok) (搬运工)Mangos源码分析（13）：再谈登录服的实现
 				http://www.cppblog.com/ming81/archive/2011/01/19/138908.html
 
+				// 密码验证的过程使用了SRP6协议
+					
+				// 登录流程
+					客户端从realmd获取session key
+					客户端用session key去世界服网关验证
 
+			// (ok) (搬运工)Mangos源码分析（14）：Mangos预编译头文件及模块划分随想
+				http://www.cppblog.com/ming81/archive/2011/01/19/138909.html
+				game已经非常庞大了，而且结构组织不好，模块的划分不好，感觉需要重构了
 
-			// (搬运工)Mangos服务器的游戏对象和AI系统(一)
+			// (ok) (搬运工)Mangos源码分析（15）：游戏对象的实现
+				http://www.cppblog.com/ming81/archive/2011/01/19/138910.html
+				很多是游戏设计方向的，其实最好是用组件来创建对象，应对快速的需求变化
+				// 实体管理系统由4个主要的组件组成
+					// 实体消息：定义实体怎样沟通。
+						
+					// 实体代码：实现一实体类的代码和数据。
+						
+					// 类列表：维护一个已经注册在案的实体类的列表。
+						
+					// 实体管理器：创建实体、管理实体树、支持发送消息到一个或者多个实体。
+						
+				// 接口调用
+				// 消息驱动
+				// CEL 的游戏对象 = 1个 entity + n个 property + n个 behavior
+				// 游戏编程精粹
+
+			//  (搬运工)Mangos服务器的游戏对象和AI系统(一)
 				http://www.cppblog.com/ming81/archive/2012/08/28/188524.html
 
+			//  (搬运工)Mangos服务器的游戏对象和AI系统(二)
+				http://www.cppblog.com/ming81/archive/2012/08/28/188527.html
+
+			//  (搬运工)Mangos服务器的游戏对象和AI系统(三)
+				http://www.cppblog.com/ming81/archive/2012/08/28/188529.html
+
+
+			// 汇总信息
 				http://www.cppblog.com/ming81/category/15288.html
 
+			// MaNGOS-Zero编译注意事项
+				http://www.cppblog.com/ming81/archive/2012/07/24/184836.html
 
 			// mangos 配置
 				http://www.cppblog.com/ming81/archive/2016/12/16/214497.html
+
+			// mangos新手教程 - 服务器配置文件中文说明
+				http://www.cppblog.com/ming81/archive/2016/12/16/214497.html
+
+			// (搬运工)LOL匹配规则
+				http://www.cppblog.com/ming81/archive/2012/11/14/195185.html
 
 		// SOAP (Simple Object Access Protocol)
 
@@ -191,28 +243,64 @@
 				// 对象的分类以及继承关系
 					// 继承关系
 						// class Object
-							// class Item
-								// (final) class Bag
+							// class Item : public Object 物品对象
+								// (final) class Bag : public Item 容器对象
 
-							// class WorldObject
-								// (final) class Corpse
+							// class WorldObject : public Object  (感觉类似我们的场景子对象)
+								// (final) class Corpse : public WorldObject 尸体对象
 									
-								// (final) class DynamicObject
+								// (final) class DynamicObject : public WorldObject 动态对象
 									
-								// class GameObject
-									// (final) class Transport
+								// class GameObject : public WorldObject
+									// (final) class Transport : public GameObject
 										
-								// class Unit
-									// class Creature
-										// (final) class Pet
+								// class Unit : public WorldObject 所有生物的基类
+									// class Creature : public Unit 类似npc类(服务端驱动)
+										// (final) class Pet : public Creature
 											
+										// (final) class TemporarySummon : public Creature
+											
+										// (final) class Totem : public Creature
 										
-									// (final) class Player
+									// (final) class Player : public Unit 玩家类(客户端驱动)
 										
 
 					// 对象分类
 						
 			
+				////////////////////////////////////////////////////////////////
+				// 对象关键成员介绍
+
+					////////////////////////////////////////////////////////////////
+					// class Object
+						
+						// 成员介绍
+							// 属性数组(这边用的一个小技巧) 可以存储 int uint uint64 float ObjectGuid bytes 放一个数组
+							// 每个字段的相关大小偏移在 UpdateFields.h 里定义,定义里用了类似的继承实现
+								union
+								{
+									int32*  m_int32Values;
+									uint32* m_uint32Values;
+									float*  m_floatValues;
+								};
+								uint16 m_valuesCount					// 每个最终类型的构造里设置(Player就在Player()里设置PLAYER_END)
+
+							bool m_inWorld;								// 是否添加进游戏世界里，控制数据同步
+
+						////////////////////////////////////////////////////////////////
+						// class WorldObject : public Object
+							
+							// 成员介绍
+								std::string m_name;						// 对象名字
+
+							////////////////////////////////////////////////////////////////
+							// class Unit : public WorldObject
+
+								////////////////////////////////////////////////////////////////
+								// class Player : public Unit
+
+									PlayerSocial *m_social;				// 好友关系
+
 		////////////////////////////////////////////////////////////////
 		// 数据同步机制
 
@@ -347,9 +435,22 @@
 							Player* pCurrChar = new Player(this);
 						// 反序列化数据库数据给Player对象
 							if (!pCurrChar->LoadFromDB(playerGuid, holder))
+							Player::LoadFromDB
+							
 						// player对象跟当前会话关联
 							SetPlayer(pCurrChar);
 						
+
+			////////////////////////////////////////////////////////////////
+			// 创建玩家
+
+
+			////////////////////////////////////////////////////////////////
+			// 删除玩家
+
+
+			////////////////////////////////////////////////////////////////
+			// 存档流程
 
 
 	////////////////////////////////////////////////////////////////
@@ -375,7 +476,10 @@
 			
 		// 3: 对象层级怎么个组织结构，对象层级怎么对应存储结构
 			比如我们分场景，玩家，npc，子容器，子对象，mangos怎么区分的
-
+			可以从以下几个角度看
+				Player的创建
+				Player的load
+				物品的操作
 			// tips
 				可以查看下 WorldSession::HandleDestroyItemOpcode 对应的代码，貌似能看出点端倪
 
@@ -383,4 +487,8 @@
 			
 
 		// 5: 数据存储时，怎么保证同一角色丢给同一个线程
+			
+		// 6: guid的生成规则
+			
+		// 7: 切场景的实现
 			
